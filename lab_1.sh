@@ -42,3 +42,58 @@ printf "satk=6\nsdef 5 spd=4" | cat > koffing1
 printf "Xoды Dive Defense Curl Double-Edge Endeavor\nHelping Hand Icy Wind Sleep Talk Snore Water Pulse" | cat > poliwag0
 printf "Bullet Seed Earth Power Giga Drain Grass Pledge Iron Tail Mud-Slap Natural Gift Rock Climb Secret Power Seed Bomb Sleep Talk Snore Stealth Rock Superpower Synthesis Worry Seed" | cat > turtwig5
 
+chmod u=rx,g=wx,o=rwx camerupt4
+chmod u=r,g=r,o= camerupt4/combusken
+chmod u=rwx,g=rx,o=wx camerupt4/pidgey
+chmod 664 camerupt4/piplup
+chmod 577 camerupt4/klinglang
+chmod u=rwx,g=wx,o=wx camerupt4/joltik
+chmod 333 camerupt4/bulbasaur
+
+chmod u=wx,g=rw,o=wx cherubi1
+chmod u=rw,g=wx,o=w cherubi1/archen
+chmod 750 cherubi1/solosis
+chmod u=rwx,g=rx,o=w cherubi1/gabite
+chmod u=rx,g=x,o=w cherubi1/ampharos
+chmod 750 cherubi1/kabutops
+
+
+chmod u=rx,g=w,o=r ferrothorn3
+chmod 060 ferrothorn3/machoke
+chmod 444 ferrothorn3/wartortle
+chmod 046 ferrothorn3/yamask
+chmod 006 ferrothorn3/slowking
+chmod 006 ferrothorn3/tirtouga
+
+chmod 440 koffing1
+chmod 440 poliwag0
+chmod 622 tortwig5
+
+cat poliwag0 > ferrothorn3/machokepoliwag
+cp poliwag0 camerupt4/pidgey
+rsync -rR cherubi1 cherubi1/gabite
+ln -s cherubi1 Copy_97
+ln poliwag0 camerupt4/pipluppoliwag
+cat "ferrothorn3/wartortle" "ferrothorn3/machoke" > koffing1_18
+ln -s turtwig5 ferrothorn3/yamaskturtwig
+
+mkdir tmp
+chmod 777 tmp
+
+wc -c poliwag0 | cat >> tmp/poliwag_wcResult
+ls -R -laSr | tail -n4 | grep '^a'
+cat -b poliwag0 2> > tmp/errors | grep -i 'e$'
+
+wc -c turtwig5 | cat >> turtwig5
+ls -lrat *ga*
+
+
+rm koffing1
+rm cherubi1/archen
+rm Copy_*
+rm camerupt4/pipluppoliw*
+rm -r camerupt4
+rmdir cherubi1/solosis
+
+
+
