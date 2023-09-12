@@ -80,10 +80,11 @@ ln -s turtwig5 ferrothorn3/yamaskturtwig
 mkdir tmp
 chmod 777 tmp
 
+#4
 wc -c poliwag0 | cat >> tmp/poliwag_wcResult
-ls -R -laSr | tail -n4 | grep '^a'
-cat -b poliwag0 2> > tmp/errors | grep -i 'e$'
-
+ls -R -laSr | tail -n4 | grep '^a' # -n4 - 4 последние строки
+cat -b poliwag0 2>> tmp/errors | grep -i 'e$'
+wc -l $(ls **/*e | grep -v "/$") | sort -nrk1 | tail -n +2 #4.4 -n + 2 со второй до конца | sort -n (по номерам) r(рекурсивно/обратно) k1( по первому столбцу )
 wc -c turtwig5 | cat >> turtwig5
 ls -lrat *ga*
 
