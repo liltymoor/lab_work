@@ -71,7 +71,13 @@ chmod 622 tortwig5
 
 cat poliwag0 > ferrothorn3/machokepoliwag
 cp poliwag0 camerupt4/pidgey
-rsync -rR cherubi1 cherubi1/gabite
+
+#3.3
+mkdir TEMP
+cp -r cherubi1 TEMP
+mv TEMP/cherubi1 cherubi1/gabite
+rmdir TEMP
+
 ln -s cherubi1 Copy_97
 ln poliwag0 camerupt4/pipluppoliwag
 cat "ferrothorn3/wartortle" "ferrothorn3/machoke" > koffing1_18
