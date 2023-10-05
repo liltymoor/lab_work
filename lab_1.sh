@@ -1,5 +1,8 @@
 echo "This shell script will pass my lab1 :)"
 
+chmod -R 777 lab0
+rm -r lab0
+
 echo "first part"
 
 mkdir lab0
@@ -99,12 +102,12 @@ chmod u-w ferrothorn3/
 echo "fourth part"
 
 #4.1
-wc -c poliwag0 | cat > /tmp/poliwag_wcResult 2>/dev/null
+wc -c poliwag0 > /tmp/poliwag_wcResult 2>/dev/null
 
 #4.2
 chmod u+r cherubi1
 chmod u+r camerupt4/bulbasaur
-ls -R -laSr | tail -n4 | grep '^a' # -n4 - 4 последние строки
+ls -R -laSr  | grep '^a' | tail -n4 # -n4 - 4 последние строки
 chmod u-r cherubi1
 chmod u-r camerupt4/bulbasaur
 
@@ -112,13 +115,13 @@ chmod u-r camerupt4/bulbasaur
 cat -b poliwag0 2>> /tmp/errorrrs | grep -i 'e$' # cat -b вывод номеров строк; grep -i регистронезависимость
 
 #4.4
-wc -l $(ls **/*e | grep -v "/$") 2>/dev/null | sort -nrk1 | tail -n +2 # -n + 2 со второй до конца | sort -n (по номерам) r(рекурсивно/обратно) k1( по первому столбцу )
+wc -l $(ls **/*e | grep -v "/$") 2>/dev/null | sort -nrk1 # -n + 2 со второй до конца | sort -n (по номерам) r(рекурсивно/обратно) k1( по первому столбцу )
 
 #4.5
-wc -c turtwig5 | cat >> turtwig5
+wc -c turtwig5 | cat >> turtwig5 2>&1 #вывод в стандартный поток
 
 #4.6
-ls -lrat '*ga*' | head -n 3
+ls -lrat '*ga*' | head -n 3 2>&1 #вывод в стандартный поток
 
 echo "fifth part"
 
@@ -134,9 +137,7 @@ rm -r camerupt4
 rmdir cherubi1/solosis
 
 
-cd ..
-chmod -R 777 lab0
-rm -r lab0
+
 
 
 
